@@ -7,11 +7,11 @@ public class Emprestimo {
         if (tipoJuros == 1){
             double total;
             total = valor * taxa * parcelas;
-            return total + valor;
+            return total;
         } else if (tipoJuros == 2) {
             double total = valor;
             while (parcelas > 0){
-                total += valor * taxa;
+                total += total * taxa;
                 parcelas--;
             }
             return total;
